@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Preview</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <main id="app">
+    <main id="image-preview">
+      <section class="upload">
+        <label for="file-upload" class="upload__label">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <p>Upload image here</p>
+          <span class="upload__change">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p>Change image</p>
+          </span>
+        </label>
+        <input type="file" name="file-upload" id="file-upload" hidden required>
+      </section>
+      <section class="image">
+        <img src="" alt="Image preview">
+      </section>
+      <section class="message">
+        <ul class="message__requirements">
+          <li>
+            <i class="fa-regular fa-circle-check"></i>
+            File size cannot be over 5MB
+          </li>
+          <li>
+            <i class="fa-regular fa-circle-check"></i>
+            Do not accept jpeg file
+          </li>
+        </ul>
+        <span class="message__state">
+          <i class="fa-regular fa-circle-check"></i>
+          <i class="fa-regular fa-circle-xmark"></i>
+        </span>
+      </section>
+    </main>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>

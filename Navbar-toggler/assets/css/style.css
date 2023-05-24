@@ -1,0 +1,160 @@
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 
+.wrapper {
+  min-height: 100vh;
+  background-color: #686de0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggler {
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: #3867d6;
+  border-radius: 0.4rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+
+.toggler.js-open {
+  background-color: #fc5c65;
+}
+
+
+.toggler::before,
+.toggler::after {
+  content: "";
+  position: absolute;
+  width: 3rem;
+  height: 0.3rem;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  transition: transform 150ms ease-in-out;
+}
+
+.toggler::before {
+  transform: translateY(-6px);
+}
+
+.toggler.js-open::before {
+  transform: rotate(45deg);
+}
+
+.toggler::after {
+  transform: translateY(6px);
+}
+
+.toggler.js-open::after {
+  transform: rotate(-45deg);
+} */
+
+
+.wrapper{
+  background-color: #0097e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.navbar-toggler {
+  position: relative;
+  background-color: #40739e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transition: background-color 100ms;
+}
+
+.navbar-toggler.js-open {
+  background-color: #e84118;
+}
+
+.toggler-bar {
+  --height: 8px;
+  --width: 76px;
+  background-color: #fff;
+  border-radius: 2px;
+  width: var(--width);
+  height: var(--height);
+  transition: background-color 100ms;
+}
+
+.js-open .toggler-bar {
+  background-color: transparent;
+}
+
+.toggler-bar::before,
+.toggler-bar::after {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 2px;
+  content: '';
+  width: var(--width);
+  height: var(--height);
+  transition: transform 100ms;
+}
+
+.toggler-bar::before {
+  transform: translateY(-20px);
+}
+
+.toggler-bar::after {
+  transform: translateY(20px);
+}
+
+.js-open .toggler-bar::before {
+  transform: rotate(45deg);
+}
+
+.js-open .toggler-bar::after {
+  transform: rotate(-45deg);
+}
+
+/* 
+.navbar-toggler::before,
+.navbar-toggler::after {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 2px;
+  content: '';
+  width: 80px;
+  height: 8px;
+  transition: transform 100ms;
+}
+
+.navbar-toggler::before {
+  transform: translateY(-12px);
+}
+
+.navbar-toggler::after {
+  transform: translateY(12px);
+}
+
+.navbar-toggler.js-open::before {
+  transform: rotate(45deg);
+}
+
+.navbar-toggler.js-open::after {
+  transform: rotate(-45deg);
+} */

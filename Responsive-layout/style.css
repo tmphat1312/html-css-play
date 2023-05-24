@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+:root {
+  --var: value;
+  --text-color: #535c68;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+#app {
+  background-color: #c7ecee;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+#app__heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.products__item {
+  background-color: #fff;
+  box-shadow: 2px 2px 6px 0px #9C9C9C;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  transition: box-shadow 150ms ease;
+}
+
+.products__item:hover {
+  box-shadow: 4px 4px 8px 0px #9c9c9cb6;
+}
+
+.product-img-wrapper {
+  overflow: hidden;
+  display: block;
+}
+
+.product-img {
+  width: 100%;
+  display: block;
+  transition: transform 200ms linear;
+}
+
+.product-img:hover {
+  transform: scale(1.05);
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info__name {
+  position: relative;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding-bottom: 4px;
+  margin-bottom: 6px;
+  opacity: 0.85;
+  transition: transform 200ms linear,
+  opacity 200ms linear;
+}
+
+.product-info__name:hover {
+  transform: translateY(-1px);
+  opacity: 1.0;
+}
+
+.product-info__name::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #95afc0;
+  transform: scaleX(0);
+  transition: transform 200ms linear;
+}
+
+.product-info__name:hover::after {
+  transform: scaleX(1);
+}
+
+.product-info__desc {
+  color: #333;
+  line-height: 1.2rem;
+  letter-spacing: 1.6px;
+}

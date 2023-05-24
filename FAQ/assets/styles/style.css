@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700&display=swap');
+
+:root {
+  --color-bg: #f0f0f0;
+  --color-light-green: #d5f5e3;
+  --color-light-blue: #d6eaf8;
+  --color-border: #9fa4a8;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Mulish', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--color-bg);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  all: unset;
+}
+
+/* --- --- */
+#container {
+  max-width: 60rem;
+}
+
+.title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-block: 1em;
+}
+
+.faq-list {
+  font-size: 1.6rem;
+}
+
+.faq {
+  --padding: 3.2rem;
+  background-color: transparent;
+  padding: var(--padding);
+  border: 2px solid var(--color-border);
+  border-radius: 1rem;
+  box-shadow: 4px 4px 0 0 var(--color-border);
+  position: relative;
+  overflow: hidden;
+  transition: background-color 200ms, height 200ms;
+  z-index: 1;
+}
+
+.faq:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.faq.active {
+  background-color: #fff;
+}
+
+.faq::before, 
+.faq::after {
+  content: "\f075";
+  font-family: 'Font Awesome 6 Free';
+  font-size: 12rem;
+  display: none;
+  position: absolute;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.faq::before {
+  color: var(--color-light-green);
+  bottom: 0;
+  left: 0;
+  transform: translate(20%, 4%);
+}
+
+.faq::after {
+  color: var(--color-light-blue);
+  top: 0;
+  left: 0;
+  transform: translateX(-32%) rotateY(-180deg);
+}
+
+.active.faq::before, 
+.active.faq::after {
+  display: block;
+}
+
+.faq-show {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq__question {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.4;
+  padding-inline-end: 2ch;
+}
+
+.faq-hide {
+  display: none;
+}
+
+.active .faq-hide {
+  display: block;
+}
+
+.faq__answer {
+  margin-block-start: 1.6em;
+  text-shadow: 1px 1px 2px #ddd;
+}
+
+.faq__toggle {
+  font-size: 3.2rem;
+  color: var(--color-border);
+  cursor: pointer;
+  transition: transform 200ms;
+}
+
+.faq__toggle:hover {
+  transform: scale(1.05);
+}
+
+i.faq__close {
+  display: none;
+}
+
+.active i.faq__open {
+  display: none;
+}
+
+.active i.faq__close {
+  display: block;
+}

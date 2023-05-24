@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --var: value;
+  --bg-color: #17A2B8;
+  --white-color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Poppins", serif;
+}
+
+body {
+  background-color: var(--bg-color);
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.key-detector__alert {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4rem;
+  font-weight: 600;
+  color: var(--bg-color);
+  background-color: var(--white-color);
+  padding: 0.4em 1em;
+  border-radius: 0.5em;
+}
+
+.key-detector__result {
+  animation: SlideUp 800ms forwards ease,
+  FadeIn 400ms forwards ease;
+}
+
+.result__code {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+  width: 3em;
+  aspect-ratio: 1 / 1;
+  font-size: 7.2rem;
+  color: var(--white-color);
+  border: 0.6rem solid currentColor;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.result__details {
+  display: grid;
+  gap: 3rem; 
+  grid-template-columns: repeat(4, 1fr);
+  font-size: 2.4rem;
+}
+
+.result__box {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.result__box span {
+  display: block;
+  text-align: center;
+  width: 24rem;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+}
+
+.result__box span:first-child {
+  background-color: #78C0C9;
+  color: var(--white-color);
+}
+
+.result__box span:last-child {
+  background-color: var(--white-color);
+}
+
+/* utility class */
+.hidden {
+  display: none;
+}
+
+/* animations */
+@keyframes SlideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes FadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

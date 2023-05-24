@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Back To Top</title>
+  <style>
+    * {
+      box-sizing: inherit;
+      padding: 0;
+      margin: 0;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+    }
+
+    ul, ol {
+      list-style: none;
+      padding-left: unset;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    #app {
+      position: relative;
+    }
+
+    #app__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    #back-to-header {
+      display: block;
+      position: fixed;
+      right: 5%;
+      bottom: 8%;
+      background-color: #f0932b;
+      border-radius: 50%;
+      box-shadow: 2px 2px 4px #999;
+      transition: visibility 200ms ease;
+    }
+
+    #back-to-header i {
+      font-size: 4rem;
+      width: 50px;
+      height: 50px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #app__header {
+      background-color: #f0932b;
+    }
+
+    #app__header h1 {
+      font-size: 4rem;
+      text-align: center;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    #app__content {
+      font-size: 1.6rem;
+    }
+
+    .articles {
+      padding-bottom: 20px;
+    }
+
+    .articles h2 {
+      font-size: 2.8rem;
+      text-align: left;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+
+    #app__footer h2 {
+      font-size: 3.2rem;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      background-color: #f0932b;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="app__inner">
+      <header id="app__header">
+        <h1>Website header</h1>
+      </header>
+      <main id="app__content">
+        <section class="articles">
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+          <article class="articles__item">
+            <h2>Article heading Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum, dicta!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, provident omnis repellendus porro pariatur iusto totam rem quae quis atque ab voluptas iste ratione libero beatae nisi voluptates maxime cum placeat sapiente? Placeat, assumenda deserunt voluptatum optio earum necessitatibus cumque ad. Laudantium sapiente sit, tempora, eos quidem reiciendis distinctio iusto facere minima, quia placeat quibusdam minus aperiam quasi aut architecto earum soluta eaque? Officiis esse aliquid nemo ipsa similique ducimus, laborum eum quaerat maxime ratione cum cupiditate reiciendis atque minus illum sequi consequuntur voluptates, modi expedita eveniet ipsam aperiam nulla! Pariatur beatae eius adipisci delectus saepe, culpa illo laboriosam nisi.</p>
+          </article>
+        </section>
+      </main>
+      <footer id="app__footer">
+        <h2>Website footer</h2>
+      </footer>
+      <a id="back-to-header" href="#app__header" title="Back to top header">
+        <i class="fa-solid fa-angle-up"></i>
+      </a>
+    </div>
+  </div>
+
+
+  <script>
+    var backToTHeader =  document.querySelector('#back-to-header');
+    console.log(backToTHeader)
+    window.onscroll = function () {
+      if (document.documentElement.scrollTop === 0) {
+        backToTHeader.style.visibility = 'hidden';
+      } else {
+        backToTHeader.style.visibility = 'visible';
+      }
+    }
+  </script>
+</body>
+</html>

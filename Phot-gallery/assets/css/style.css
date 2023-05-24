@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #dadada;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#wrapper {
+  max-width: 120rem;
+  min-height: 100vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery__photos {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 1.6rem 2.8rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.gallery__photo {
+  overflow: hidden;
+  box-shadow: 2px 2px 4px 0 #777;
+  border-radius: 0.4rem;
+}
+
+.gallery__photo img {
+  display: block;
+  max-width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 300ms;
+}
+
+.gallery__photo img:hover {
+  transform: scale(1.4);
+  cursor: pointer;
+}
+
+.gallery__slider {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: #dadada;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  animation: ZoomIn 200ms forwards ease-out, FadeIn 200ms forwards ease-out;
+}
+
+.gallery__slider .slider__numbers,
+.gallery__slider .slider__close,
+.gallery__slider .slider__backward,
+.gallery__slider .slider__forward {
+  position: absolute;
+  cursor: pointer;
+  transition: transform 200ms;
+}
+
+.gallery__slider .slider__numbers {
+  top: 0.2em;
+  left: 0.6em;
+}
+
+.gallery__slider .slider__close {
+  top: 0.2em;
+  right: 0.6em;
+}
+
+.gallery__slider .slider__close:hover {
+  transform: scale(1.1);
+}
+
+.gallery__slider .slider__backward,
+.gallery__slider .slider__forward {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.gallery__slider .slider__backward:hover,
+.gallery__slider .slider__forward:hover {
+  top: 50%;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery__slider .slider__backward {
+  left: 0.6em;
+}
+
+.gallery__slider .slider__forward {
+  right: 0.6em;
+}
+
+.gallery__slider .slider__photo {
+  max-width: 70%;
+  max-height: 70%;
+  cursor: default;
+}
+
+/** Animations */
+@keyframes ZoomIn {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,33 @@
+
+
+@media (min-width: 30em) {
+  .products.loaded {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 48em) {
+  .products.loaded {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products__loading {
+    font-size: 4.6rem;
+  }
+}
+
+@media (min-width: 54em) {
+  .products.loaded {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 64em) {
+  .products.loaded {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  
+  .products__loading {
+    font-size: 5.6rem;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Todo List</title>
+  <link rel="icon" type="image/x-icon" href="./assets/images/favicon/favicon.ico">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+  <main id="app">
+    <section id="todos">
+      <form action="#" class="todos__generator">
+        <div class="form-group">
+          <input type="text" name="task" id="todos__input" placeholder=" " autocomplete="off">
+          <label for="todos__input" class="todos__label">What's up?
+          </label>
+        </div>
+        <button type="submit" value="submit" class="btn" id="todos__submit">Add</button>
+      </form>
+      <ul class="todos__list">
+        <!-- <li class="completed">
+          <p>Springcleaning</p>
+          <i class='bx bx-trash'></i>
+        </li>
+        <li>
+          <p>Springcleaning</p>
+          <i class='bx bx-trash'></i>
+        </li> -->
+      </ul>
+    </section>
+  </main>
+
+  <script src="./scripts/app.js"></script>
+</body>
+</html>

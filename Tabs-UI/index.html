@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Tabs Ui</title>
+</head>
+<body>
+  <div id="app">
+    <main id="app__content">
+      <secion class="tabs-UI">
+        <ul class="tabs__list">
+          <li class="tabs__item active">
+            <i class="fa-solid fa-code"></i>
+            React
+          </li>
+          <div class="tabs__item">
+            <i class="fa-solid fa-gear"></i>
+            Angular
+          </div>
+          <div class="tabs__item">
+            <i class="fa-solid fa-plus-circle"></i>
+            Ember
+          </div>
+          <div class="tabs__item">
+            <i class="fa-solid fa-pen-nib"></i>
+            Vue.js
+          </div>
+          <div class="line"></div>
+        </ul>
+        <ul class="tabs-content__list">
+          <li class="tabs-content__item active">
+            <h3>React</h3>
+            <p>React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
+          </li>
+          <li class="tabs-content__item">
+            <h3>Angular</h3>
+            <p>Angular is an application design framework and development platform for creating efficient and sophisticated single-page apps.</p>
+          </li>
+          <li class="tabs-content__item">
+            <h3>Ember</h3>
+            <p>Ember.js is a productive, battle-tested JavaScript framework for building modern web applications. It includes everything you need to build rich UIs that work on any device.</p>
+          </li>
+          <li class="tabs-content__item">
+            <h3>Vue.js</h3>
+            <p>Vue (pronounced /vjuː/, like view) is a progressive framework for building user interfaces. Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable.</p>
+          </li>
+        </ul>
+      </secion>
+    </main>
+  </div>
+  <script src="./main.js"></script>
+</body>
+</html>

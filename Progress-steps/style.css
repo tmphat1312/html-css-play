@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+:root {
+  --variable: value;
+  --color-unreached: #e0e0e0;
+  --color-reached: #3498db;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  all: unset;
+}
+
+.btn {
+  font-size: 1.6rem;
+  background-color: var(--color-reached);
+  color: #fff;
+  padding-inline: 1.4em;
+  padding-block: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, 0.2);
+  transition: transform 200ms, background 200ms;
+}
+
+.btn:hover {
+  transform: scale(1.02);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn.disabled,
+.btn:disabled {
+  pointer-events: none;
+  background-color: var(--color-unreached);
+}
+
+.btn ~ .btn {
+  margin-left: 1.2rem;
+}
+
+#wrapper {
+  min-height: 100vh;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.progress-steps {
+  width: min(36rem, 80vw);
+  user-select: none;
+}
+
+.steps {
+  position: relative;
+}
+
+.circles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.step {
+  width: 3rem;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-content: center;
+  color: #999;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 0.3rem solid var(--color-unreached);
+  z-index: 1;
+  transition: border 300ms, color 300ms;
+}
+
+.step.active {
+  border-color: var(--color-reached);
+  color: var(--color-reached);
+}
+
+.steps::before,
+.line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 0.4rem;
+}
+
+.steps::before {
+  content: "";
+  background-color: var(--color-unreached);
+  width: 100%;
+}
+
+.line {
+  background-color: var(--color-reached);
+  width: 0;
+  transition: width 400ms;
+}
+
+.actions {
+  margin-top: 3.6rem;
+  text-align: center;
+}

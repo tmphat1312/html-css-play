@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Gallery</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div id="wrapper">
+      <section class="gallery">
+        <ul class="gallery__photos">
+          <li class="gallery__photo">
+            <img src="./assets/images/img1.jpeg" alt="Gallery photo" />
+          </li>
+          <li class="gallery__photo">
+            <img src="./assets/images/img2.jpeg" alt="Gallery photo" />
+          </li>
+          <li class="gallery__photo">
+            <img src="./assets/images/img3.jpeg" alt="Gallery photo" />
+          </li>
+          <li class="gallery__photo">
+            <img src="./assets/images/img4.jpeg" alt="Gallery photo" />
+          </li>
+          <li class="gallery__photo">
+            <img src="./assets/images/img5.jpeg" alt="Gallery photo" />
+          </li>
+          <li class="gallery__photo">
+            <img src="./assets/images/img6.jpeg" alt="Gallery photo" />
+          </li>
+          <li class="gallery__photo">
+            <img src="./assets/images/img7.jpeg" alt="Gallery photo" />
+          </li>
+          <li class="gallery__photo">
+            <img src="./assets/images/img8.jpeg" alt="Gallery photo" />
+          </li>
+        </ul>
+        <section class="gallery__slider hidden">
+          <div class="slider__numbers">1/20</div>
+          <div class="slider__close" title="Esc">
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+          <div class="slider__backward" title="Left arrow">
+            <i class="fa-solid fa-angle-left"></i>
+          </div>
+          <img
+            src="./assets/images/img1.jpeg"
+            alt="Slider photo"
+            class="slider__photo"
+          />
+          <div class="slider__forward" title="Right arrow">
+            <i class="fa-solid fa-angle-right"></i>
+          </div>
+        </section>
+      </section>
+    </div>
+
+    <script src="./scripts/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+:root {
+  --variable: value;
+  --color-nav: #ff7979;
+  --color-text: #333333;
+  --color-heading: #222222;
+  --color-light-white: #fafafa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lato", sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #333;
+}
+
+a,
+button {
+  all: unset;
+}
+
+.rotate20 {
+  transform: rotate(-20deg);
+}
+
+/* --- --- --- --- --- --- */
+#wrapper {
+  overflow: hidden;
+}
+
+/* --- --- */
+.nav__control {
+  --size: 16rem;
+  width: var(--size);
+  aspect-ratio: 1 / 1;
+  position: fixed;
+  top: calc(var(--size) * (-0.5));
+  left: calc(var(--size) * (-0.5));
+  font-size: 2.8rem;
+  border-radius: 50%;
+  background-color: var(--color-nav);
+  transform: rotate(0deg);
+  transform-origin: center;
+  transition: transform 400ms linear;
+  z-index: 1;
+}
+
+.nav--show .nav__control {
+  transform: rotate(-90deg);
+}
+
+.nav__control > div {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.occupant {
+  height: 50%;
+}
+
+.nav__control button {
+  font-size: inherit;
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav__close {
+  transform: translate(-36%, -36%);
+}
+
+.nav__list {
+  --indent: 1.6rem;
+  position: fixed;
+  left: var(--indent);
+  bottom: 5rem;
+  color: #fff;
+  transform: translateX(-200%);
+  transition: transform 600ms;
+}
+
+.nav--show .nav__list {
+  transform: translate(0, 0);
+}
+
+.nav__list a {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 500;
+  padding-block: 2.4rem;
+  cursor: pointer;
+  transition: text-shadow 200ms, transform 200ms;
+}
+
+.nav__list a:hover {
+  text-shadow: 2px 2px 4px #999;
+  transform: scale(1.12);
+}
+
+.nav__list li:nth-child(1) {
+  padding-left: var(--indent);
+}
+
+.nav__list li:nth-child(2) {
+  padding-left: calc(2 * var(--indent));
+}
+
+.nav__list li:nth-child(3) {
+  padding-left: calc(3 * var(--indent));
+}
+
+.nav__list i {
+  margin-right: 0.5em;
+}
+
+/* --- --- */
+.content {
+  background-color: var(--color-light-white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-origin: 0 0;
+  transition: transform 400ms linear;
+}
+
+.article {
+  width: min(100rem, 84vw);
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  font-size: 1.6rem;
+  color: var(--color-text);
+  line-height: 2.4rem;
+}
+
+.article__headline {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  text-transform: capitalize;
+  line-height: 1.1;
+}
+
+.article__author {
+  font-style: italic;
+  font-size: 1.4rem;
+  color: #555555;
+}
+
+.article p {
+  /* margin-block: 1em; */
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.article__figheading {
+  color: var(--color-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-block-end: 1em;
+}
+
+.article figcaption {
+  text-align: center;
+}

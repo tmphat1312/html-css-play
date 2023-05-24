@@ -1,0 +1,134 @@
+:root {
+  --white-color: #e5e5e5;
+  --primary-color: #e26e70;
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  line-height: 1.5;
+}
+
+button {
+  all: unset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-block-end: 1em;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );
+}
+
+.btn {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #333;
+  padding: 1em 2em;
+  background-color: var(--white-color);
+  border-radius: 1rem;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  transition: color 200ms, background-image 200ms, transform 200ms;
+}
+
+.btn:hover {
+  background-image: linear-gradient( 45deg, var(--white-color) 60%, var(--primary-color));
+  opacity: 0.8;
+}
+
+.btn:active {
+  color: #000;
+  transform: scale(0.9);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.js-open {
+  display: flex;
+}
+
+.modal__content {
+  max-width: 60rem;
+  background-color: var(--white-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  animation: slideDown 400ms forwards;
+}
+
+.modal__header {
+  --padding: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.6rem;
+  background-color: var(--primary-color);
+  position: relative;
+}
+
+.modal__header h3 {
+  margin: unset;
+  color: var(--white-color);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.modal__close {
+  color: var(--white-color);
+  font-size: 4rem;  
+  position: absolute;
+  right: var(--padding);
+  top: 0;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.modal__body {
+  padding: 1.6rem;
+  font-size: 1.6rem;
+}
+
+.modal__footer {
+  padding: 1.6rem;
+}
+
+.modal__footer h4 {
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0.5;
+    transform: translateY(-50%);
+  }
+  to {
+    opacity: 1.0;
+    transform: translate(0);
+  }
+}

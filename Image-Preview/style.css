@@ -1,0 +1,135 @@
+:root {
+  --var: value;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: serif;
+  font-size: 62.5%;
+}
+
+body {
+  background-image: linear-gradient(45deg, #3973D2, #7D4FD4);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+:where(#app, #image-preview) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+#image-preview {
+  font-size: 1.6rem;
+  color: #fff;
+  width: min(90%, 50rem);
+  aspect-ratio: 16 / 9;
+  background-color: transparent;
+  border: 0.2rem dashed currentColor;
+  border-radius: 0.4rem;
+  position: relative;
+}
+
+.upload {
+  font-size: 2.8rem;
+  text-align: center;
+}
+
+.upload :is(p, i) {
+  cursor: pointer;
+}
+
+.upload i {
+  font-size: 5.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.upload__change {
+  font-size: 1.6rem;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 1em);
+  display: none;
+}
+
+.upload__change i {
+  font-size: 2.4rem;
+  margin-bottom: 0.2rem;
+}
+
+.image img {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: none;
+}
+
+.message__requirements {
+  position: absolute;
+  top: calc(100% + 1em);
+  left: 0;
+  background-color: #fff;
+  color: #333;
+  padding-inline: 1em;
+  padding-block: 0.5em;
+  border-radius: 0.2rem;
+  line-height: 1.4;
+  display: none;
+}
+
+.invalid .message__requirements {
+  display: initial;
+}
+
+.message__requirements::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 2em;
+  border: 1rem solid;
+  border-color: transparent transparent #fff transparent;
+}
+
+.message__requirements i {
+  margin-right: 0.4rem;
+}
+
+.message__state {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+}
+
+.message__state i {
+  font-size: 2.4rem;
+  display: none;
+  z-index: 1;
+}
+
+.valid .message__state i:first-child {
+  color: #2ecc71;
+  display: initial;
+}
+
+.invalid .message__state i:last-child {
+  color: red;
+  display: initial;
+}

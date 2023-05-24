@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  --var: value;
+  --primary-color: #4dae54;
+  --light-black: #272d40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #4dae54, #3d8880);
+}
+
+a, button {
+  all: unset;
+}
+
+.btn {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 0.8em 1em;
+  background-color: var(--primary-color);
+  border-radius: 4px;
+}
+
+.btn ~ .btn {
+  margin-left: 0.5rem;
+}
+
+.product {
+  --padding: 2rem;
+  width: 32rem;
+  height: 40rem;
+  font-size: 1.6rem;
+  padding: var(--padding);
+  margin: 120px auto;
+  background-color: #272d40;
+  color: #fff;
+  border-radius: 1.6rem;
+  text-align: center;
+  position: relative;
+}
+
+.product__icon {
+  position: absolute;
+  top: var(--padding);
+  cursor: pointer;
+}
+
+.product__heart {
+  left: var(--padding);
+}
+
+.product__cart {
+  right: var(--padding);
+}
+
+.product__img {
+  width: 90%;
+  margin-top: 2rem;
+  transition: transform 400ms;
+}
+
+.product:hover .product__img {
+  transform: translateY(-9rem) rotate(-20deg) ;
+}
+
+.product__img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.product:hover .product__title,
+.product:hover .product__price {
+  transform: translateY(-9rem) scale(1.1);
+}
+
+.product__price {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
+.product__title,
+.product__price {
+  transition: transform 600ms;
+}
+
+
+.product__options {
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: bottom 400ms, opacity 400ms, visibility 400ms;
+  transition-delay: 200ms;
+}
+
+
+.product:hover .product__options {
+  opacity: 1;
+  visibility: visible;
+  /* top: 65%; */
+  bottom: var(--padding)
+}
+
+.product__options .size,
+.product__options .color {
+  display: flex;
+  align-items: center;
+}
+
+.product__options h4 {
+  margin-right: 1em;
+  font-size: 1.8rem;
+}
+
+.product__options span {
+  margin: 0.5rem;
+}
+
+.product__options .size,
+.product__options .color {
+  margin-bottom: 1rem;
+}
+.product__options .size span {
+  padding: 0.3em 0.5em;
+  background-color: #dadada;
+  color: var(--light-black);
+  border-radius: 4px;
+}
+
+.product__options .color span {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.product__options .color__green {
+  background-color: #008000;
+} 
+
+.product__options .color__red {
+  background-color: #ff0000;
+}
+
+.product__options .color__black {
+  background-color: #000000;
+}

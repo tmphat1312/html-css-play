@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --var: value;
+  --color-primary: #5372EF;
+  --color-tag: #F2F2F2;
+  --color-button: #E1E1E1;
+  --color-text: #000; 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background-color: var(--color-primary);
+}
+
+button {
+  all: unset;
+}
+
+input {
+  all: unset;
+}
+
+/* Utilities */
+.btn {
+  display: inline-block;
+  padding-inline: 0.8em;
+  padding-block: 0.8em;
+  border-radius: 0.4rem;
+
+  background-color: var(--color-primary);
+  color: #fff;
+
+  cursor: pointer;
+  opacity: 0.9;
+  transition: box-shadow 200ms, opacity 200ms;
+  will-change: box-shadow, opacity;
+}
+
+.btn ~ .btn {
+  margin-left: 0.3rem;
+}
+
+.btn:hover {
+  box-shadow: 2px 2px 6px 0 var(--color-button);
+  opacity: 1;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+
+.search {
+  width: min(56rem, 95%);
+  background-color: #fff;
+  padding: 3.2rem;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  color: var(--color-text);
+}
+
+.search__header {
+  margin-bottom: 0.8em;
+}
+
+.search__header > div {
+  display: flex;
+}
+
+.search__header img {
+  width: 2rem;
+  margin-right: 0.5rem;
+}
+
+.search__header h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.search__header p {
+  margin-block: 1em;
+  font-size: 1.4rem;
+}
+
+.search__field {
+  border: 0.2rem solid var(--color-primary);
+  border-radius: 0.5rem;
+  padding-inline: 1em;
+  padding-block: 1em;
+  margin-bottom: 2rem;
+}
+
+.search__tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: -0.2em;
+}
+
+.search__tags li {
+  display: flex;
+  background-color: var(--color-tag);
+  padding-inline: 0.5em;
+  padding-block: 0.4em;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #E8E8E8;
+  color: #383838;
+  margin: 0.2em;
+}
+
+.search__tags i {
+  aspect-ratio: 1 / 1;
+  background-color: var(--color-button);
+  color: #ACACAC;
+  border-radius: 50%;
+  padding-inline: 0.2rem;
+  padding-block: 0.2rem;
+  margin-inline-start: 0.5rem;
+  cursor: pointer;
+}
+
+.search__field input {
+  padding-block: 0.5em;
+  display: block;
+  width: 100%;
+}
+
+.search__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}

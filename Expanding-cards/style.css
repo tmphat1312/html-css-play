@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600&display=swap");
+
+:root {
+  --var: value;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background: rgb(87, 133, 134);
+  background: linear-gradient(
+    41deg,
+    rgba(87, 133, 134, 1) 0%,
+    rgba(95, 175, 99, 1) 25%,
+    rgba(195, 230, 95, 1) 50%,
+    rgba(164, 158, 73, 1) 75%,
+    rgba(171, 131, 46, 1) 100%
+  );
+  min-height: 100vh;
+}
+
+#wrapper {
+  min-height: 100vh;
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panels-container {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  height: 80vh;
+}
+
+.panel {
+  flex: 1;
+  height: 100%;
+  border-radius: 5rem;
+  overflow: hidden;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 4px 0 #333;
+  position: relative;
+  transition: flex 800ms;
+}
+
+.panel.active {
+  flex: 10;
+}
+
+.panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 200ms ease;
+}
+
+.panel img:hover {
+  transform: scale(1.02);
+}
+
+.panel h3 {
+  position: absolute;
+  bottom: 1em;
+  left: 2em;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-shadow: 2px 2px 6px #000;
+  animation: FadeIn 1000ms ease-in;
+  display: none;
+}
+
+.active h3 {
+  display: initial;
+}
+
+@keyframes FadeIn {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}

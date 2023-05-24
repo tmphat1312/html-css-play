@@ -1,0 +1,218 @@
+/* Reset CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+/* Styles */
+:root {
+  --var: value;
+  --color-primary: #3ca7ee;
+  --color-secondary: #9b408f;
+  --color-text: #757575;
+  --color-error: #ff7979;
+  --color-accepted: #2ecc71;
+
+  --fw-600: 600;
+  --fw-500: 500;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-image: linear-gradient(120deg, #3ca7ee, #9b408f);
+}
+
+input,
+button,
+a {
+  all: unset;
+}
+
+
+.btn {
+  width: 100%;
+  padding-block: 0.5em;
+  margin-top: 5.4rem;
+  font-size: 2rem;
+  font-weight: var(--fw-600);
+  text-align: center;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: opacity 200ms, box-shadow 200ms;
+}
+
+.btn:hover {
+  opacity: 1;
+  box-shadow: 2px 2px 4px 0 #ddd;
+}
+
+#app {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#login-form {
+  width: min(40rem, 95%);
+  padding: 2.4rem 4rem;
+  font-size: 1.6rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  color: var(--color-text);
+}
+
+.form__title {
+  font-size: 4rem;
+  font-weight: var(--fw-600);
+  color: #333;
+  text-align: center;
+  margin-block-end: 4rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group ~ .form-group {
+  margin-top: 4.4rem;
+}
+
+.form-group > div {
+  --input-padding-block: 0.5em;
+  position: relative;
+}
+
+.form__input {
+  width: 100%;
+  display: block;
+  padding-block: var(--input-padding-block);
+  border-bottom: 0.2rem solid #ADADAD;
+  caret-color: var(--color-primary);
+}
+
+.invalid .form__input {
+  border-color: var(--color-error);
+}
+
+.form__label {
+  position: absolute;
+  left: 0;
+  bottom: var(--input-padding-block);
+  transition: color 200ms, bottom 200ms;
+}
+
+.form__input:focus + .form__label {
+  bottom: calc(110% - var(--input-padding-block));
+}
+
+.form__input:not(:placeholder-shown) + .form__label {
+  bottom: calc(110% - var(--input-padding-block));
+}
+
+.form__input:valid + .form__label {
+  color: var(--color-accepted);
+}
+/* 
+.form__input:invalid + .form__label {
+  color: var(--color-primary);
+} */
+
+.form-group > div span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0.2rem;
+  background-color: var(--color-primary);
+  transition: width 500ms;
+}
+
+.form__input:focus ~ span {
+  width: 100%;
+}
+
+.form__message {
+  display: none;
+  font-size: 1.4rem;
+  padding-block: 0.5em; 
+  position: absolute;
+}
+
+.invalid .form__message {
+  display: block;
+  color: var(--color-error);
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.form__login-btn {
+  color: #fff;
+  background-color: var(--color-primary);
+  padding-block: 0.6em;
+  border-radius: 2rem;
+}
+
+.form__help {
+  margin-top: 2.8rem;
+  text-align: center;
+}
+
+.form__help a {
+  color: var(--color-primary);
+}
+
+.form__help a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}

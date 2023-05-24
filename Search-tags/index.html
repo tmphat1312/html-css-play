@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Tags To Search Field</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <main id="wrapper">
+    <section class="search">
+      <header class="search__header">
+        <div>
+          <img src="./assets/images/tag.svg" alt="tag icon">
+          <h2>Tags</h2>
+        </div>
+        <p>Press "Enter" or add a comma "," after each tag</p>
+      </header>
+      <main class="search__field">
+        <ul class="search__tags">
+          <li>tag <i class='bx bx-x'></i></li>
+        </ul>
+        <input type="text" name="search-input" id="search__input" placeholder="Search..">
+      </main>
+      <footer class="search__footer">
+        <p class="search__remaining-tags">
+          <span>10</span> tag(s) are remaining
+        </p>
+        <section class="search__actions">
+          <button class="btn search__remove-all">Remove All</button>
+          <button class="btn">Search</button>
+        </section>
+      </footer>
+    </section>
+  </main>
+
+  <script src="./scripts/app.js"></script>
+</body>
+</html>

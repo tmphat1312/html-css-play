@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --color-pure-white: #fff;
+  --color-ps: rgb(87, 84, 236);
+  --color-transparent-ps: rgba(87, 84, 236, 0.6); 
+  --color-xbox: rgb(28, 122, 28);
+  --color-transparent-xbox: rgba(43, 43, 43, 0.7); 
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Roboto", serif;
+}
+
+body {
+  background: rgb(193, 167, 121);
+  background: linear-gradient(
+    100deg,
+    rgba(193, 167, 121, 1) 0%,
+    rgba(128, 175, 153, 1) 41%,
+    rgba(117, 92, 201, 1) 75%,
+    rgba(88, 110, 189, 1) 100%
+  );
+}
+
+button,
+a {
+  all: unset;
+}
+
+#main {
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* --- --- --- */
+.split {
+  --active-width: 75%;
+  --other-width: 25%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  font-size: 6.4rem;
+  text-align: center;
+  color: var(--color-pure-white);
+  transition: width 1000ms ease-in-out;
+  overflow: hidden;
+  z-index: 1;
+}
+.split-left {
+  background: url("../images/ps.jpg") no-repeat center center / cover;
+  left: 0;
+}
+.hover-left .split-left {
+  width: var(--active-width);
+}
+.hover-left .split-right {
+  width: var(--other-width);
+}
+.split-right {
+  background-image: url("../images/xbox.jpg");
+  right: 0;
+}
+.hover-right .split-right {
+  width: var(--active-width);
+}
+.hover-right .split-left {
+  width: var(--other-width);
+}
+
+.split::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.split-left::before {
+  background-color: var(--color-transparent-ps);
+}
+.split-right::before {
+  background-color: var(--color-transparent-xbox);
+}
+
+.split .brand {
+  margin-block-start: 2.4em;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 2;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.split .btn {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-inline: 3.5em;
+  padding-block: 1em;
+  border: 4px solid currentColor;
+  cursor: pointer;
+  transition: background 50ms;
+}
+.split-left .btn:hover {
+  border-color: transparent;
+  background-color: var(--color-ps);
+}
+.split-right .btn:hover {
+  border-color: transparent;
+  background-color: var(--color-xbox);
+}

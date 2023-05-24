@@ -1,0 +1,87 @@
+:root {
+  --page-bgc: #fff;
+  --text-color: #2c2c54;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--page-bgc);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.social-media-list {
+  display: flex;
+}
+
+.social-media-item a {
+  color: var(--text-color);
+  background-color: #d1d8e0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  transition: background-color 300ms ease;
+}
+
+.social-media-item .facebook:hover {
+  background-color: #1877F2;
+}
+
+.social-media-item .google:hover {
+  background-color: #fbbc05;
+}
+
+.social-media-item .youtube:hover {
+  background-color: #CD201F;
+}
+
+.social-media-item .twitter:hover {
+  background-color: #1DA1F2;
+}
+
+.social-media-item:hover i {
+  color: #fff;
+  transform: translateY(-50px);
+}
+
+.social-media-item i {
+  line-height: 50px;
+  text-align: center;
+  font-size: 1.25rem;
+  width: 100%;
+  height: 100%;
+  transition: transform 300ms ease;
+}
+
+.social-media-item i:nth-child(2) {
+  visibility: hidden;
+}
+
+.social-media-item:hover i:nth-child(2) {
+  visibility: visible;
+}
